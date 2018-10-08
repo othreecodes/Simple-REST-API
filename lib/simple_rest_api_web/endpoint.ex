@@ -35,6 +35,8 @@ defmodule SimpleRestApiWeb.Endpoint do
     key: "_simple_rest_api_key",
     signing_salt: "4ieckAue"
 
+  plug CORSPlug, origin: "http://localhost:8080"
+
   plug SimpleRestApiWeb.Router
 
   @doc """
